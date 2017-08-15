@@ -5,11 +5,21 @@
 */
 function countItem(array, item) {
     let count = 0;
-    arr.forEach((elem) => {
-        if (elem === item) {
-            count++;
-        }
-    });
+    //解法1
+    // arr.forEach((elem) => {
+    //       count += elem === item ? 1 : 0;
+    // });
+    //解法2
+    // for (let index in array) {
+    //     count += array[index] === item ? 1 : 0;
+    // }
+    //解法3
+    // for (let elem of array) {
+    //     count += elem === item ? 1 : 0;
+    // }
+    //解法4
+    count = arr.filter((elem) => elem === item).length
+
     return count;
 }
 
